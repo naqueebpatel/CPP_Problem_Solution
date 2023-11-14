@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+class volume
+{
+	int a,r,h;
+	public:
+		void vol(int a)
+		{
+			cout<<"THE VOLUME IS:::"<<a*a*a<<endl;
+		}
+		void vol(int r,int h)
+		{
+			cout<<"THE VOLUME OF CYLINDER IS:::"<<3.14*r*r*h<<endl;
+		}
+		void vol(double r)
+		{
+			cout<<"THE VOLUME OF SPHERE IS:::"<<(4/3)*3.14*r*r*r<<endl;
+		}
+};
+int main()
+{
+	volume v;
+	v.vol(3);
+	v.vol(5,7);
+	v.vol(8);
+}

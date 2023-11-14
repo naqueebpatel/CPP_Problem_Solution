@@ -1,0 +1,66 @@
+#include<iostream>
+using namespace std;
+class circle2;
+class circle1
+{
+	int r1;
+	float area1;
+	public:
+	//	float area1;
+	circle1(int x1)
+	{
+		r1=x1;
+	}
+    void compute_area()
+    {
+    	area1=3.14*r1*r1;
+	}
+	void display()
+	{
+	    cout<<"THE RADIUS IS:::"<<r1<<endl;
+		cout<<"THE AREA OF CIRCLE IS:::"<<area1<<endl;
+	}
+	friend void compare(circle1 c1,circle2 c2);
+};
+class circle2
+{
+	int r2;
+	float area2;
+	public:
+	//	float area2;
+	circle2( int x2 ) 
+	{
+		r2=x2;
+	}
+    void compute_area()
+    {
+    	area2=3.14*r2*r2;
+	}
+	void display()
+	{
+	    cout<<"THE RADIUS IS:::"<<r2<<endl;
+		cout<<"THE AREA OF CIRCLE IS:::"<<area2<<endl;
+	}
+	friend void compare(circle1 c1,circle2 c2);
+};
+        void compare(circle1 c1,circle2 c2)
+         {
+         	if(c1.area1>c2.area2)
+         	{
+         		cout<<"THE AREA OF CIRCLE1 IS GREATER i.e:::"<<c1.area1<<endl;
+			 }
+			 else
+			 {
+			 	cout<<"THE AREA OF CIRCLE2 IS GREATER i.e:::"<<c2.area2<<endl;
+			 }
+		 }
+int main()
+{
+	circle1 c1(5);
+	circle2 c2(6);
+	c1.compute_area();
+	c2.compute_area();
+	c1.display();
+	c2.display();
+	compare(c1,c2);
+}

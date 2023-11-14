@@ -1,0 +1,43 @@
+#include<iostream>
+using namespace std;
+class integer
+{
+	private:
+	int a,b;
+	public:
+		integer()
+		{
+			a=1;
+			b=1;
+		}
+		integer(int x,int y)
+		{
+			a=x;
+			b=y;
+		}
+		void display()
+		{
+			cout<<"A:"<<a<<endl;
+			cout<<"B:"<<b<<endl;
+		}
+		friend  void sub(integer i1,integer i2);
+};
+        void sub(integer i1,integer i2)
+        {
+        	integer result;
+        	result.a=i1.a - i2.a;
+    		result.b=i1.b - i2.b;
+			result.display();
+        	
+		}
+int main()
+{
+	int a,b;
+	cout<<"ENTER TWO INTEGERS"<<endl;
+	cin>>a>>b;
+    integer i1(a,b);
+    cout<<"ENTER TWO INTEGERS"<<endl;
+	cin>>a>>b;
+    integer i2(a,b);
+    sub(i1,i2);
+}

@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;
+class area
+{
+	int s,l,b,r;
+	public:
+		inline int square(int s)
+		{
+			return s*s;
+		}
+		inline int rectangle(int l,int b)
+		{
+			return l*b;
+		}
+		inline float circle(int r)
+		{
+			return 3.14*r*r;
+		}
+};
+int main()
+{
+	int s,l,b,r,res,res1;
+	float res2;
+	cout<<"enter side of square"<<endl;
+	cin>>s;
+	cout<<"enter length and breadth"<<endl;
+	cin>>l>>b;
+	cout<<"enter radius"<<endl;
+	cin>>r;
+	area a;
+	res=a.square(s);
+	res1=a.rectangle(l,b);
+	res2=a.circle(r);
+	cout<<res<<endl<<res1<<endl<<res2<<endl;
+	return 0;
+	
+}

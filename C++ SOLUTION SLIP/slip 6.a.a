@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+class triangle
+{
+	int b,h,a;
+	double bs,hs;
+	public:
+		void area(int b,int h)
+		{
+			cout<<"the area of right angled traingle is::"<<(b*h)/2<<endl;
+		}
+		void area(double bs,double hs)
+		{
+			cout<<"the area of isosceles triangle is::"<<(bs*hs)/2<<endl;
+		}
+		void area(int a)
+		{
+			cout<<"the area of equilateral triangle is"<<(1.732/4)*a*a<<endl;
+		}
+};
+int main()
+{
+    int b,h,a;
+	double bs,hs;
+	triangle t;
+	cout<<"ENTER THE BASE AND HEIGHT OF RIGHT ANGLED TRIANGLE"<<endl;
+	cin>>b>>h;
+	t.area(b,h);
+	cout<<"ENTER THE BASE AND HEIGHT OF ISOCELES TRIANGLE"<<endl;
+	cin>>bs>>hs;
+	t.area(bs,hs);
+	cout<<"ENTER THE SIDE OF EQUILATERAL TRIANGLE"<<endl;
+	cin>>a;
+	t.area(a);
+}

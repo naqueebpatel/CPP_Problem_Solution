@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+class area
+{
+	int a;
+	double p;
+	public:
+	area(int r,double pi=3.14)
+	{
+		a=r;
+		p=pi;
+	}
+	void display()
+	{
+		cout<<"THE AREA OF CIRCLE IS:::"<<p*a*a<<endl;
+	}
+};
+int main()
+{
+	int r;
+	cout<<"ENTER THE RADIUS"<<endl;
+	cin>>r;
+	area a(r);
+	a.display();
+}

@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+class rectangle
+{
+	int l,b;
+	public:
+	inline void area(int l,int b)
+	{
+		cout<<"THE AREA IS:::"<<l*b<<endl;
+	}
+	inline void perimeter(int l,int b)
+	{
+		cout<<"THE PERIMETER IS:::"<<2*(l+b)<<endl;
+	}
+};
+int main()
+{
+	int l,b;
+	cout<<"ENTER THE LENGTH AND BREADTH OF RECTANGLE"<<endl;
+	cin>>l>>b;
+		rectangle r;
+		r.area(l,b);
+		r.perimeter(l,b);
+}

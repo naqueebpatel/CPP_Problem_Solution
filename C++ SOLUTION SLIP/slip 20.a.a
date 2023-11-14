@@ -1,0 +1,37 @@
+#include<fstream>
+#include<iostream>
+#include<conio.h>
+using namespace std;
+ofstream fout("pqr.txt");
+class student
+{
+	int rno,tm;
+	char name[20];
+	public:
+	void accept()
+	{
+		cout<<"ENTER ROLL NUMBER"<<endl;
+		cin>>rno;
+		cout<<"ENTER NAME"<<endl;
+		cin>>name;
+		cout<<"ENTER TOTAL MARKS"<<endl;
+		cin>>tm;
+		fout<<"STUDENT ROLL NUMBER IS:::"<<rno<<endl;
+		fout<<"STUDENT NAME IS:::"<<name<<endl;
+		fout<<"STUDENT TOTAL MARKS IS"<<tm<<endl;
+	}
+};
+int main()
+{
+	int n,i;
+	cout<<"ENTER NO OF DETAILS"<<endl;
+	cin>>n;
+	student obj[n];
+	for(i=0;i<n;i++)
+	{
+	obj[i].accept();
+    } 
+	if(!fout)
+		cout<<"FILE NOT FOUND";
+		getch();
+}

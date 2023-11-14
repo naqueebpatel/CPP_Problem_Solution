@@ -1,0 +1,26 @@
+
+#include<iostream>
+using namespace std;
+class factorial
+{
+	int num;
+	int sum=1;
+	public:
+		void fac(int num)
+		{
+			int i;
+			for(i=1;i<=num;i++)
+			{
+				sum=sum*i;
+			}
+			cout<<"THE FACTORIAL IS:::"<<sum<<endl;
+		}
+};
+int main()
+{
+	int num;
+	cout<<"ENTER THE NUMBER TO FIND FACTORIAL"<<endl;
+	cin>>num;
+	factorial f;
+	f.fac(num);
+}

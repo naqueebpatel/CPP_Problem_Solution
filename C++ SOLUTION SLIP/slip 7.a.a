@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+class integer
+{
+	int a,b;
+	public:
+		int smalltozero(int a,int b)
+		{
+			if(a>b)
+			{
+				b=0;
+			}
+			else
+			{
+				a=0;
+			}
+			cout<<"THE VALUE AFTER CHANGING ARE:::"<<a<<" and "<<b;
+		}
+};
+int main()
+{
+	int a,b;
+	cout<<"ENTER THE NUMBERS::"<<endl;
+	cin>>a>>b;
+	integer stz;
+	stz.smalltozero(a,b);
+}

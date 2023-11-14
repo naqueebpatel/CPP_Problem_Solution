@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+class odd
+{
+	int a,b,i;
+	public:
+		void display()
+		{
+			int a,b,i;
+			cout<<"ENTER THE TWO NUMBERS"<<endl;
+			cin>>a>>b;
+			cout<<"::THE ODD NUMBERS ARE AS FOLLOWS::"<<endl;
+			for(i=a;i<b;i++)
+			{
+				if(i%2==1)
+				{
+				cout<<i<<endl;
+			    }
+			}
+		}
+};
+int main()
+{
+	odd dis;
+	dis.display();
+}

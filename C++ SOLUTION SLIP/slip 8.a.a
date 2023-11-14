@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+class time
+{
+	int hr,min,sec;
+	public:
+		void second(int hr,int min,int sec)
+		{
+			int sum;
+			hr=hr*60*60;
+			min=min*60;
+			sum=hr+min+sec;
+			cout<<"THE TIME IN SECONDS IS:::"<<sum<<endl;
+		}
+};
+int main()
+{
+	int hr,min,sec;
+	cout<<"ENTER HOURS:MINUTES:SECONDS"<<endl;
+	cin>>hr>>min>>sec;
+	time t;
+	t.second(hr,min,sec);
+}

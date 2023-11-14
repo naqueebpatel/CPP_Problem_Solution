@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+class binary
+{
+    public:
+    	int a;
+    binary()
+    {
+        a=10;
+    }
+    binary(int x)
+    {
+        a=x;
+    }
+    void display()
+    {
+        cout<<"THE VALUE OF A IS"<<a<<endl;
+    }
+    friend int operator-(binary x,binary y);
+};
+     int operator-(binary x,binary y)
+    {
+        binary b3;
+        b3.a=x.a-y.a;
+    }
+int main()
+{
+binary b1(100);
+binary b2(200);
+binary b3;
+b3=b1-b2;
+b1.display();
+b2.display();
+b3.display();
+}

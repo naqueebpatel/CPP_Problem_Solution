@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+class power
+{
+	int b;
+	double a;
+	public:
+		int pow(double a,int b)
+		{
+			double res=1;
+			while(b!=0)
+			{
+				res=res*a;
+				b--;
+			}
+			cout<<"the result is:::"<<res<<endl;
+		}
+};
+int main()
+{
+	double a;
+	int b;
+	cout<<"enter base and power"<<endl;
+	cin>>a>>b;
+	power p;
+	p.pow(a,b);
+	return 0;
+}

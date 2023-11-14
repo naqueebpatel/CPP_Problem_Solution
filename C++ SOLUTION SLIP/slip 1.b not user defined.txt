@@ -1,0 +1,34 @@
+#include<iostream>
+using namespace std;
+class power
+{
+	public:
+		int pow(double m,int n)
+		{
+		double sum=1;
+		int i;
+			for(i=0;i<n;i++)
+			{
+				sum=sum*m;
+			}
+			cout<<"the ans is:::"<<sum<<endl;
+	    }  
+	    	int pow(int m,int n)
+		{
+			int sum=1,i;
+			for(i=0;i<n;i++)
+			{
+				sum=sum*m;
+			}
+			cout<<"the ans is:::"<<sum<<endl;
+		}
+};
+
+int main()
+{
+    power p;
+	p.pow(2.6,3);
+	p.pow(3,4);
+	return 0;
+	
+}

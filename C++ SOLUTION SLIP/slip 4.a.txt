@@ -1,0 +1,38 @@
++#include<iostream>
+using namespace std;
+class test
+{
+	int a,x,b,y;
+	public:
+	test(int a,int b)
+	{
+		x=a;
+		y=b;
+	}
+	void operator++()
+	{
+		x=x+y;
+	}
+	void operator--()
+	{
+		x=x-y;
+	}
+	void display()
+	{
+		cout<<"THE VALUE AFTER OVERLOADING IS"<<x<<endl;
+	}
+};
+int main()
+{
+	int a,b;
+	cout<<"ENTER THE INTEGER TO OVERLOAD"<<endl;
+	cin>>a;
+	cout<<"ENTER THE VALUE TO OVERLOAD"<<endl;
+	cin>>b;
+	test t1(a,b);
+	++t1;
+	t1.display();
+	--t1;
+	t1.display();
+	
+}
